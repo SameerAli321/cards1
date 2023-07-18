@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body><button style="margin-left: 50%;" id="btn">new row</button>
+    <table id="tb">
+        <tbody id="table">
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Address</th>
+                <th>phone</th>
+            </tr>
+            <tr>
+                <td><input type="text" name="" id=""></td>
+                <td><input type="text" name="" id=""></td>
+                <td><input type="text"></td>
+                <td><input type="text" name="" id=""></td>
+            </tr>
+        </tbody>
+    </table>
+    
+</body>
+
+<script>
+    const tb = document.getElementById("tb")
+    // let row = tb.insertRow(0)
+    // const cell = row.insertCell(0)
+    // cell.innerHTML = "<td><p>jello</p></td>"
+    const btn = document.getElementById("btn")
+    const table = document.getElementById("table")
+    btn.addEventListener("click", () => {
+        const inp_txt1 = document.createElement("input")
+        inp_txt1.setAttribute("type", "test")
+        const inp_txt2 = document.createElement("input")
+        inp_txt2.setAttribute("type", "test")
+        const inp_txt3 = document.createElement("input")
+        inp_txt3.setAttribute("type", "test")
+        const inp_txt4 = document.createElement("input")
+        inp_txt4.setAttribute("type", "test")
+
+        const table_data1 = document.createElement("td")
+        table_data1.appendChild(inp_txt1)
+        const table_data2 = document.createElement("td")
+        table_data2.appendChild(inp_txt2)
+        const table_data3 = document.createElement("td")
+        table_data3.appendChild(inp_txt3)
+        const table_data4 = document.createElement("td")
+        table_data4.appendChild(inp_txt4)
+
+        const table_row = document.createElement("tr")
+        table_row.appendChild(table_data1)
+        table_row.appendChild(table_data2)
+        table_row.appendChild(table_data3)
+        table_row.appendChild(table_data4)
+
+
+
+        table.appendChild(table_row)
+    })
+</script>
+
+</html>
